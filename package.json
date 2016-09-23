@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"webpack": "webpack",
-	"webpack:w": "webpack -w"
+    "webpack": "webpack",
+    "webpack:w": "webpack -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.14.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
