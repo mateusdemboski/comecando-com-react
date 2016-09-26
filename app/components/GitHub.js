@@ -2,23 +2,26 @@ import React from 'react';
 import SearchUser from './SearchUser';
 import UserInfo from './UserInfo';
 
-var GitHub = React.createClass({
-    getInitialState: function(){
-        return {
+class GitHub extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
             user: null,
             repos: []
         };
-    },
+        this.updateRepos= this.updateRepos.bind(this);
+        this.updateUser= this.updateUser.bind(this);
+    }
 
-    updateUser: function(user) {
+    updateUser(user) {
         this.setState({ user: user });
-    },
+    }
 
-    updateRepos: function(repos) {
+    updateRepos(repos) {
         this.setState({ repos: repos });
-    },
+    }
 
-    render: function() {
+    render() {
         return(
           <div className="container">
             <SearchUser
@@ -31,6 +34,6 @@ var GitHub = React.createClass({
           </div>
         );
     }
-});
+};
 
 export default GitHub;
